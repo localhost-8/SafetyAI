@@ -2785,9 +2785,19 @@ while True:
                                             c = str(soup.find_all('h1')) + ' \ *add+ \ '
                                             print("error!")
                                         try:
+                                            c += str(soup.select_one('h2').text) + ' \ *add+ \ '
+                                        except:
+                                            c += str(soup.find_all('h2')) + ' \ *add+ \ '
+                                            print("error!")
+                                        try:
                                             c += str(soup.select_one('h3').text) + ' \ *add+ \ '
                                         except:
                                             c += str(soup.find_all('h3')) + ' \ *add+ \ '
+                                            print("error!")
+                                        try:
+                                            c += str(soup.select_one('h4').text) + ' \ *add+ \ '
+                                        except:
+                                            c += str(soup.find_all('h4')) + ' \ *add+ \ '
                                             print("error!")
                                         try:
                                            d = str(soup.select_one('span').text)
@@ -2819,9 +2829,12 @@ while True:
                                             e = str(e[0:128])
                                         except:
                                             print("error!")
-                                            
-                                            
-                                        H3 = str("\n [Title]", a ,"\n [Body]", b,"\n [Object]", c,"\n [Answer]", d,"\n [Model]", e)              
+
+
+                                        H3 = f"\n [Body] {b} \n [Object] {c} \n [Answer] {d} \n [Model] {e}"
+                                        print('Other: ', H3)
+                                        s = re.findall(r'(мат)', H3)
+                                        print('Answer: ', s)
                                     
                                     
                                     
