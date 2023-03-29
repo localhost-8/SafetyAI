@@ -1,4 +1,4 @@
-token = "ок, а теперь напишем ключ входа? "
+token = "ок, а теперь напишем 18 bit ключ входа? "
 while True:
     import os, time, sys, subprocess
     if len(sys.argv) == 2:
