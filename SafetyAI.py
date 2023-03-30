@@ -1828,8 +1828,6 @@ while True:
             if message.content.startswith("register"):
                 if isinstance(message.channel, discord.DMChannel):
                   await message.author.send("registration mode coming soon!")
-            else:
-                await message.channel.send("pls register in bot dm")
                 
             if message.content.startswith("$ok"):
                 on_member_join()
