@@ -281,7 +281,7 @@ while True:
             
         @slash.slash(description="chat")
         @commands.cooldown(1, 10, commands.BucketType.user)
-        async def DM(ctx, user_to_dm: discord.Member, arg): # user_to_dm is the discord tag like mj#0081
+        async def DM(ctx, user_to_dm: discord.Member, arg): 
             colset = [0x8A2BE2,0x9b59b6,0x71368a,0x1abc9c,0x2ecc71,0x11806a,0xff0000,0x607d8b,0x1f8b4c,0x48D1CC,0x00FF00,0x3498db]
             setx = random.choice(colset)
             if user_to_dm is None:
